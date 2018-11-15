@@ -16,13 +16,22 @@ class Organ extends React.Component{
   constructor(props){
     super(props)
 
-    if(props.name == undefined){
-      props.name = "Barry"
-    }
+    let organ = props.details
+    let place = props.location
 
+    if(organ == undefined){
+      organ.name = "Barry"
+      organ.img = "Barry"
+      organ.desc = "Barry"
+    }
+    
     this.state = {
       showEntry: false,
-      name: props.name
+      name: organ.name,
+      img: organ.img,
+      desc: organ.desc,
+      top: place.top,
+      left: place.left
     }
 
     this.clickHandle = this.clickHandle.bind(this)
@@ -36,17 +45,29 @@ class Organ extends React.Component{
   }
 
   render (){
-    let theElement;// = ( <div><h1>Stuff</h1></div> );
+
+
+    let position = {
+      top: `${this.state.top}%`,
+      left: `${this.state.left}%`
+    }
+
+
+    let theElement;
     if(this.state.showEntry){
       theElement = (
-        <div style={divStyleShow} onClick={this.clickHandle}>
-          <h2>This is the {this.state.name}</h2>
+        // <div style={divStyleShow} onClick={this.clickHandle}>
+        <div style={position} className="organShow" onClick={this.clickHandle}>
+          <span className="organDetailsText">This is the {this.state.name}</span>
+          <img className="organDetailsImage" src={this.state.img} alt={this.state.name}/>
         </div>
       )
     }
     else{
       theElement = (
-        <div style={divStyleHide} onClick={this.clickHandle}>
+        // <div style={divStyleHide} onClick={this.clickHandle}>
+        <div style={position} className="organHide" onClick={this.clickHandle}>
+          <img style={{widht:"98%", height:"98%"}} src={this.state.img} alt={this.state.name}/>
         </div>
       )
     }
