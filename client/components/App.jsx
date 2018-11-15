@@ -9,15 +9,15 @@ import {getOrgans, getOrganId} from '../api/index'
 let theLocations = [
   {
     top: 5,
-    left: 16
+    left: 45
   },
   {
     top: 25,
-    left: 16
+    left: 45
   },
   {
     top: 37,
-    left: 13
+    left: 40
   },
   {
     top: 57,
@@ -65,6 +65,7 @@ class App extends React.Component{
       return (
         <div className="mainContainer">
           <div className="personBody">
+            <img className="personOutline" src="/images/personOutline.jpg"></img>
             {stuff}
           </div>
         </div>
