@@ -58,11 +58,11 @@ class Organ extends React.Component{
       theElement = (
         // <div style={divStyleShow} onClick={this.clickHandle}>
         <div style={position} className="organShow" onClick={this.clickHandle}>
+          <img className="organDetailsImage" src={this.state.img} alt={this.state.name}/>
           <div className="organDetailsInfo">
             <h2 className="organDetailsText">{this.state.name}</h2>
             <p>{this.state.desc}</p>
           </div>
-          <img className="organDetailsImage" src={this.state.img} alt={this.state.name}/>
         </div>
       )
     }
