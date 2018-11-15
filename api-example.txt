@@ -1,0 +1,32 @@
+
+
+
+API request
+
+/list
+
+[
+  {
+    name: "blargh",
+    id: 1
+  },
+  {
+    name: "blargh",
+    id: 2
+  },
+  {
+    name: "blargh",
+    id: 3
+  }
+]
+
+
+
+/organ/:id
+
+{
+  id: 1,
+  name:"blargh",
+  imageUrl: "/images/blargh.png",
+  desciption : "a single string of stuff"
+}
