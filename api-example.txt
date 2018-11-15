@@ -28,5 +28,5 @@ API request
   id: 1,
   name:"blargh",
   imageUrl: "/images/blargh.png",
-  desciption : "a single string of stuff"
+  description : "a single string of stuff"
 }
