@@ -19,8 +19,7 @@ export function getOrganById (organId) {
     return returnedId
   })
   .catch(() => {
-    throw Error('This needs to be the organsid route')
-
+    throw Error('This needs to be the organs id route')
   })
 }
 
