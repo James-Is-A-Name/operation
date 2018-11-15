@@ -1,5 +1,7 @@
 import request from "superagent";
 
+// Gets list of all organs
+
 export function getOrgans() {
   return request.get('/api/list')
     .then(res => {
@@ -10,6 +12,8 @@ export function getOrgans() {
       throw Error('This needs to be the organs api route')
     })
 }
+
+// Gets list of organs by their ID
 
 export function getOrganId(id) {
   return request.get(`/api/organ/${id}`)
