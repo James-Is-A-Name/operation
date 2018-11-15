@@ -1,7 +1,7 @@
 import request from "superagent";
 
 export function getOrgans() {
-  return request.get('/v1/list')
+  return request.get('/api/list')
     .then(res => {
       let organs = res.body
       return organs
@@ -11,8 +11,8 @@ export function getOrgans() {
     })
 }
 
-export function getOrganById(organId) {
-  return request.get(`/v1/list/${organId}`)
+export function getOrganId(id) {
+  return request.get(`/api/organ/${id}`)
     .then(res => {
       let returnedId = res.body
       return returnedId
