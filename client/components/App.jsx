@@ -2,49 +2,75 @@ import React from 'react'
 
 import Organ from './Organ'
 
-
-let theBrain = {
-  name:"Brain",
-  desc: "The brain is a squishy thing with strange lumps",
-  img: "/images/Nothing.png"
-}
-
-let theLungs = {
-  name:"Lungs",
-  desc: "A big'ol bag o air",
-  img: "/images/Nothing.png"
-}
-
-let theStomach = {
-  name:"Stomach",
-  desc: "FEEEEEED MEEEEEEEEE",
-  img: "/images/Nothing.png"
-}
+import {getOrgans, getOrganId} from '../api/index'
 
 
-let local1 = {
-  top: 10,
-  left: 10
-}
-let local2 = {
-  top: 30,
-  left: 10
-}
-let local3 = {
-  top: 50,
-  left: 20
-}
 
-const App = () => {
-  return (
-    <div className="mainContainer">
-      <div className="personBody">
-        <Organ location={local1} details={theBrain}/>
-        <Organ location={local2} details={theLungs}/>
-        <Organ location={local3} details={theStomach}/>
-      </div>
-    </div>
-  )
+let theLocations = [
+  {
+    top: 5,
+    left: 16
+  },
+  {
+    top: 25,
+    left: 16
+  },
+  {
+    top: 37,
+    left: 13
+  },
+  {
+    top: 57,
+    left: 20
+  },
+  {
+    top: 50,
+    left: 50
+  }
+]
+
+class App extends React.Component{
+  constructor(props){
+    super(props)
+
+    this.state = {
+      organs : []
+    }
+  }
+
+  componentDidMount(){
+    getOrgans().then( (data)=> {
+
+      data = data.map( (organ)=> {
+        organ.desc = organ.description;
+        organ.img = organ.imageUrl;
+        return organ
+      })
+      this.setState({
+        organs: data
+      })
+    })
+  }
+  
+
+    render(){
+
+      let stuff = this.state.organs.map((organ,i) => {
+
+        console.log("i is ",organ)
+
+        return (<Organ key={i} location={theLocations[i]} details={organ}/>)
+      })
+
+      return (
+        <div className="mainContainer">
+          <div className="personBody">
+            {stuff}
+          </div>
+        </div>
+      )
+    }
+
 }
 
 export default App
