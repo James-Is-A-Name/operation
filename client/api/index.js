@@ -7,7 +7,7 @@ export function getOrgans() {
       return organs
     })
     .catch(() => {
-      throw Error('This needs to be the organs route')
+      throw Error('This needs to be the organs api route')
     })
 }
 
@@ -18,6 +18,6 @@ export function getOrganId(id) {
       return returnedId
     })
     .catch(() => {
-      throw Error('This needs to be the organs id route')
+      throw Error('This needs to be the organs api id route')
     })
 }
