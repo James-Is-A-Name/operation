@@ -47,9 +47,15 @@ class Organ extends React.Component{
   render (){
 
 
-    let position = {
+    let positionShow = {
       top: `${this.state.top}%`,
-      left: `${this.state.left}%`
+      left: `${this.state.left}%`,
+      zIndex: 999
+    }
+    let positionHide = {
+      top: `${this.state.top}%`,
+      left: `${this.state.left}%`,
+      zIndex: 1
     }
 
 
@@ -57,7 +63,7 @@ class Organ extends React.Component{
     if(this.state.showEntry){
       theElement = (
         // <div style={divStyleShow} onClick={this.clickHandle}>
-        <div style={position} className="organShow" onClick={this.clickHandle}>
+        <div style={positionShow} className="organShow" onClick={this.clickHandle}>
           <img className="organDetailsImage" src={this.state.img} alt={this.state.name}/>
           <div className="organDetailsInfo">
             <h2 className="organDetailsText">{this.state.name}</h2>
@@ -69,7 +75,7 @@ class Organ extends React.Component{
     else{
       theElement = (
         // <div style={divStyleHide} onClick={this.clickHandle}>
-        <div style={position} className="organHide" onClick={this.clickHandle}>
+        <div style={positionHide} className="organHide" onClick={this.clickHandle}>
           <img style={{widht:"98%", height:"98%"}} src={this.state.img} alt={this.state.name}/>
         </div>
       )

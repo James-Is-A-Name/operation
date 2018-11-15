@@ -8,8 +8,8 @@ import {getOrgans, getOrganId} from '../api/index'
 
 let theLocations = [
   {
-    top: 5,
-    left: 45
+    top: 4,
+    left: 44
   },
   {
     top: 25,
@@ -20,11 +20,11 @@ let theLocations = [
     left: 40
   },
   {
-    top: 57,
-    left: 20
+    top: 46,
+    left: 45
   },
   {
-    top: 50,
+    top: 36,
     left: 50
   }
 ]
