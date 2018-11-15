@@ -2,16 +2,16 @@
   position: absolute;
   width: 100px;
   height: 100px;
-  border: solid 1px;
 }
 
 .organShow {
+    background-color: wheat;
     position: absolute;
     width: 500px;
-    height: 100px;
+    height: auto;
     border: solid 4px;
     display: grid;
-    grid-template-columns: 400px 100px;
+    grid-template-columns: 100px 400px;
 }
 
 
@@ -29,9 +29,16 @@
     text-align: center;
 }
 
-.personBody{
-    height: 100vh;
+
+.personOutline{
+    height: 100%;
+    width: 50vw;
     background-image: url("/images/personOutline.jpg");
     background-repeat: no-repeat;
     background-size: contain;
+}
+
+.personBody{
+    height: 100vh;
+    width: auto;
 }
