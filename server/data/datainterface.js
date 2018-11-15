@@ -1,16 +1,16 @@
-let express = require("express");
-let router = express.Router();
+let db = require("./data");
 
-
-function getOrgans(){
-
+function getOrgans() {
+  return db;
 }
 
-function getOrganId(id){
-
+function getOrganId(id) {
+  return db.find(organ => {
+    return organ.id == id;
+  });
 }
 
 module.exports = {
   getOrgans,
   getOrganId
-}
+};
