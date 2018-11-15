@@ -1,0 +1,24 @@
+.organHide {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: solid 1px;
+}
+
+.organShow {
+    position: absolute;
+    width: 500px;
+    height: 100px;
+    border: solid 4px;
+    display: grid;
+    grid-template-columns: 400px 100px;
+}
+
+
+.organDetailsImage{
+    height:100%;
+}
+.organDetailsText{
+    text-align: center;
+    width: 80%;
+}
