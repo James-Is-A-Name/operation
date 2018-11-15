@@ -3,24 +3,24 @@
     "id": 1,
     "name": "Brain",
     "imageUrl": "/images/Brain.png",
-    "desciption": "The human brain is the command center for the human nervous system. It receives signals from the body's sensory organs and outputs information to the muscles. The human brain has the same basic structure as other mammal brains but is larger in relation to body size than any other brains."
+    "description": "The human brain is the command center for the human nervous system. It receives signals from the body's sensory organs and outputs information to the muscles. The human brain has the same basic structure as other mammal brains but is larger in relation to body size than any other brains."
   },
   {
     "id": 2,
     "name": "Lungs",
     "imageUrl": "/images/lungs.png",
-    "desciption": "Humans have two lungs, a right lung and a left lung. They are situated within the thoracic cavity of the chest. The right lung is bigger than the left, which shares space in the chest with the heart.."
+    "description": "Humans have two lungs, a right lung and a left lung. They are situated within the thoracic cavity of the chest. The right lung is bigger than the left, which shares space in the chest with the heart.."
   },
   {
     "id": 4,
     "name": "Stomach",
     "imageUrl": "/images/Stomach.png",
-    "desciption": "The stomach is a muscular organ located on the left side of the upper abdomen. The stomach receives food from the esophagus. ... The stomach secretes acid and enzymes that digest food. Ridges of muscle tissue called rugae line the stomach. The stomach muscles contract periodically, churning food to enhance digestion."
+    "description": "The stomach is a muscular organ located on the left side of the upper abdomen. The stomach receives food from the esophagus. ... The stomach secretes acid and enzymes that digest food. Ridges of muscle tissue called rugae line the stomach. The stomach muscles contract periodically, churning food to enhance digestion."
   },
   {
     "id": 5,
     "name": "Spleen",
     "imageUrl": "/images/Spleen.png",
-    "desciption": "The spleen is an organ in the upper far left part of the abdomen, to the left of the stomach. The spleen varies in size and shape between people, but it’s commonly fist-shaped, purple, and about 4 inches long. Because the spleen is protected by the rib cage, you can’t easily feel it unless it’s abnormally enlarged."
+    "description": "The spleen is an organ in the upper far left part of the abdomen, to the left of the stomach. The spleen varies in size and shape between people, but it’s commonly fist-shaped, purple, and about 4 inches long. Because the spleen is protected by the rib cage, you can’t easily feel it unless it’s abnormally enlarged."
   }
 ]
