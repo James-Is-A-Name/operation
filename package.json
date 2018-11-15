@@ -7,7 +7,7 @@
   "author": "EDA",
   "license": "ISC",
   "scripts": {
-    "dev-server": "node server",
+    "dev-server": "nodemon server",
     "dev-client": "webpack --watch",
     "start": "webpack && node server",
     "dev": "node server & webpack --watch",
@@ -28,7 +28,8 @@
     ]
   },
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "nodemon": "^1.18.6"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
