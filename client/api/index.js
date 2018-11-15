@@ -18,6 +18,10 @@ export function getOrganById (organId) {
     let returnedId = res.body
     return returnedId
   })
+  .catch(() => {
+    throw Error('This needs to be the organsid route')
+
+  })
 }
 
 
