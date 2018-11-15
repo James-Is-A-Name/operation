@@ -1,11 +1,14 @@
 let express = require("express");
 let router = express.Router();
-let db = require("../server/data/data");
+let db = require("../server/data/datainterface");
 
 router.get("/list", (req, res) => {
-  let id = db.getOrganId(id);
+  res.json(db.getOrgans());
 });
 
-router.get("./list/:id");
+router.get("/organ/:id", (req, res) => {
+  const id = req.params.id;
+  res.json(db.getOrganId(id));
+});
 
 module.exports = router;
