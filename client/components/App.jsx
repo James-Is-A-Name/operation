@@ -6,7 +6,9 @@ const App = () => {
   return (
     <div>
       <h1>React development has begun!</h1>
-      <Organ />
+      <Organ name="brain"/>
+      <Organ name="stomach"/>
+      <Organ name="lungs"/>
     </div>
   )
 }
