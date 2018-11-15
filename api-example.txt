@@ -3,7 +3,7 @@
 
 API request
 
-/list
+/api/list
 
 [
   {
@@ -22,7 +22,7 @@ API request
 
 
 
-/organ/:id
+/api/organ/:id
 
 {
   id: 1,
