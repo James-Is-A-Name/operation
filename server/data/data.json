@@ -12,6 +12,12 @@
     "description": "Humans have two lungs, a right lung and a left lung. They are situated within the thoracic cavity of the chest. The right lung is bigger than the left, which shares space in the chest with the heart.."
   },
   {
+    "id": 3,
+    "name": "Liver",
+    "imageUrl": "/images/liver.png",
+    "description": "The liver is an accessory digestive gland that produces bile, an alkaline compound which helps the breakdown of fat. Bile aids in digestion via the emulsification of lipids. The gallbladder, a small pouch that sits just under the liver, stores bile produced by the liver which is afterwards moved to the small intestine to complete digestion"
+  },
+  {
     "id": 4,
     "name": "Stomach",
     "imageUrl": "/images/Stomach.png",
