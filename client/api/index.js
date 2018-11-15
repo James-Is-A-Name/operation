@@ -13,10 +13,12 @@ export function getOrgans() {
 }
 
 export function getOrganById (organId) {
-  return request.get(`/v1/organ/${organId}`)
+  return request.get(`/v1/list/${organId}`)
   .then(res => {
     let returnedId = res.body
     return returnedId
   })
 }
+
+
 
