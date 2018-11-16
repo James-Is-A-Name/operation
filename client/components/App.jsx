@@ -9,23 +9,23 @@ import {getOrgans, getOrganId} from '../api/index'
 let theLocations = [
   {
     top: 4,
-    left: 44
+    left: 46
   },
   {
     top: 25,
-    left: 45
+    left: 47
   },
   {
     top: 37,
-    left: 40
+    left: 44
   },
   {
     top: 46,
-    left: 45
+    left: 48
   },
   {
     top: 36,
-    left: 50
+    left: 51
   }
 ]
 
@@ -72,12 +72,18 @@ class App extends React.Component{
       })
 
       return (
+
+        <React.Fragment>
+        <div className="headerSection">
+          <img src="/images/logo.png" alt="logo"/>
+        </div>
         <div className="mainContainer">
           <div className="personBody">
             <img className="personOutline" src="/images/personOutline.jpg"></img>
             {stuff}
           </div>
         </div>
+        </React.Fragment>
       )
     }
 
