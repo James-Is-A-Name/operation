@@ -63,6 +63,12 @@
     animation:spin 10s linear infinite; */
 }
 
+.spinning{
+  -webkit-animation: spin alternate 20s linear infinite;
+  -moz-animation: spin alternate 20s linear infinite;
+  animation: spin alternate 20s linear infinite;
+}
+
 .personOutline {
   height: 100%;
   max-width: 600px;

@@ -36,14 +36,18 @@ class App extends React.Component{
 
     if (props.testData){
       this.state = {
-        organs : props.testData
+        organs : props.testData,
+        spin: false
       }
     }
     else{
       this.state = {
-        organs : []
+        organs : [],
+        spin: false
       }
     }
+
+    this.clickHandle = this.clickHandle.bind(this)
   }
 
   componentDidMount(){
@@ -62,6 +66,12 @@ class App extends React.Component{
       })
     })
   }
+
+  clickHandle(){
+    this.setState({
+      spin: !this.state.spin
+    })
+  }
   
 
     render(){
@@ -71,13 +81,18 @@ class App extends React.Component{
         return (<Organ key={i} location={theLocations[i]} details={organ}/>)
       })
 
+      let mainContainerClass = "mainContainer"
+      if(this.state.spin){
+        mainContainerClass += " spinning"
+      }
+
       return (
 
         <React.Fragment>
         <div className="headerSection">
-          <img src="/images/logo.png" alt="logo"/>
+          <img onClick={this.clickHandle} src="/images/logo.png" alt="logo"/>
         </div>
-        <div className="mainContainer">
+        <div className={mainContainerClass}>
           <div className="personBody">
             <img className="personOutline" src="/images/personOutline.jpg"></img>
             {stuff}
