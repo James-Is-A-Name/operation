@@ -1,4 +1,5 @@
 import React from 'react'
+import { endianness } from 'os';
 
 
 let divStyleHide = {
@@ -23,6 +24,12 @@ class Organ extends React.Component{
       organ.name = "Barry"
       organ.img = "Barry"
       organ.desc = "Barry"
+    }
+
+    if(props.location == undefined){
+      place = {}
+      place.top = 100;
+      place.left = 100;
     }
     
     this.state = {
