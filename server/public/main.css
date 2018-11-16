@@ -5,58 +5,74 @@
 }
 
 .organShow {
-    background-color: wheat;
-    position: absolute;
-    width: 500px;
-    height: auto;
-    border: solid 4px;
-    display: grid;
-    grid-template-columns: 100px 400px;
+  background-color: wheat;
+  position: absolute;
+  width: 500px;
+  height: auto;
+  border: solid 4px;
+  display: grid;
+  grid-template-columns: 100px 400px;
 }
 
-@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
-
-.organDetailsImage{
-    -webkit-animation:spin alternate 7s linear infinite;
-    -moz-animation:spin alternate 7s linear infinite;
-    animation:spin alternate 7s linear infinite;
-    height:100px;
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
 }
-.organDetailsText{
-    text-align: center;
-    width: 400px;
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
 }
-
-
-.headerSection{
-    -webkit-animation:spin alternate 20s linear infinite;
-    -moz-animation:spin alternate 20s linear infinite;
-    animation:spin alternate 20s linear infinite;
-    text-align: center;
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
+.organDetailsImage {
+  -webkit-animation: spin alternate 7s linear infinite;
+  -moz-animation: spin alternate 7s linear infinite;
+  animation: spin alternate 7s linear infinite;
+  height: 100px;
+}
 
-.mainContainer{
-    position: relative;
-    text-align: center;
-    /* -webkit-animation:spin 10s linear infinite;
+.organDetailsText {
+  text-align: center;
+  width: 400px;
+}
+
+.headerSection {
+  -webkit-animation: spin alternate 20s linear infinite;
+  -moz-animation: spin alternate 20s linear infinite;
+  animation: spin alternate 20s linear infinite;
+  text-align: center;
+}
+
+.mainContainer {
+  position: relative;
+  text-align: center;
+
+  cursor: url("/images/cursor-small.png"), auto;
+  /* cursor: wait; */
+  /* Makes the entire body spin */
+
+  /* -webkit-animation:spin 10s linear infinite;
     -moz-animation:spin 10s linear infinite;
     animation:spin 10s linear infinite; */
 }
 
-
-.personOutline{
-    height: 100%;
-    max-width: 600px;
-    width: 50vw;
-    background-image: url("/images/personOutline.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;
+.personOutline {
+  height: 100%;
+  max-width: 600px;
+  width: 50vw;
+  background-image: url("/images/personOutline.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
-.personBody{
-    height: 100vh;
-    width: auto;
+.personBody {
+  height: 100vh;
+  width: auto;
 }
