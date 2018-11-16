@@ -33,8 +33,16 @@ class App extends React.Component{
   constructor(props){
     super(props)
 
-    this.state = {
-      organs : []
+
+    if (props.testData){
+      this.state = {
+        organs : props.testData
+      }
+    }
+    else{
+      this.state = {
+        organs : []
+      }
     }
   }
 
@@ -49,6 +57,9 @@ class App extends React.Component{
       this.setState({
         organs: data
       })
+      .catch( (err)=>{
+        console.log("Got an err of ",err);
+      })
     })
   }
   
@@ -56,8 +67,6 @@ class App extends React.Component{
     render(){
 
       let stuff = this.state.organs.map((organ,i) => {
-
-        console.log("i is ",organ)
 
         return (<Organ key={i} location={theLocations[i]} details={organ}/>)
       })
